@@ -1,12 +1,7 @@
-// import {Footer} from "./Components/footer"
-import { Home } from "./pages/home";
+import Game from "./Components/accessGame";
+
 function App() {
-  return (
-    <>
-      <Home />
-      {/* <Footer/> */}
-    </>
-  );
+  return <Game />;
 }
 
 export default App;
