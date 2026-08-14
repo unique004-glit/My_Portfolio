@@ -1,7 +1,7 @@
 export function Navbar() {
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-white/15 bg-[#6366F1]/95 shadow-lg backdrop-blur-lg">
+      <nav className="sticky top-0 z-50 border-b border-white/15   shadow-lg backdrop-blur-lg">
         <div className="flex justify-between items-center px-5 py-6">
           <div className="flex items-center">
             <span className="text-white text-4xl font-bold">
