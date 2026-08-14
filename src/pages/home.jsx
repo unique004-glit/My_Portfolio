@@ -1,5 +1,7 @@
 import Typewriter from "../Components/typewiter";
 import { Navbar } from "../Components/navbar";
+import FolderCard from "../Components/folderCard";
+import  Webapp  from "../Components/WebApp_Websites.jsx";
 
 const specialties = [
   "Frontend Development",
@@ -97,18 +99,18 @@ export function Home() {
               ))}
             </div>
 
-            <button
-              type="button"
+            <a
+              href="#OurWorks"
               className="font-bricolage font-bold bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View My Work
-            </button>
+            </a>
           </div>
         </section>
       </main>
 
       <section id="about">
-        <div className="text-4xl text-white text-center font-semibold font-bricolage mt-3">
+        <div className="text-4xl text-white text-center font-semibold font-bricolage mt-10">
           <h1>About Me</h1>
         </div>
 
@@ -123,13 +125,16 @@ export function Home() {
               using PHP, MySQL, JavaScript, React, and Tailwind CSS. I enjoy
               creating efficient, scalable, and user-friendly digital solutions
               that solve real-world problems.
-              <br /> <br /> My journey in tech is driven by curiosity,
-              continuous learning, and a passion for innovation. From school
-              portals and inventory management systems to agricultural
-              technology platforms, I love transforming ideas into functional
-              products. I'm constantly expanding my skills and exploring new
-              technologies to become a well-rounded software engineer, I'm also
-              the Founder and CEO of Umark Designs and Development.
+            </p>
+            <p>
+              {" "}
+              My journey in tech is driven by curiosity, continuous learning,
+              and a passion for innovation. From school portals and inventory
+              management systems to agricultural technology platforms, I love
+              transforming ideas into functional products. I'm constantly
+              expanding my skills and exploring new technologies to become a
+              well-rounded software engineer, I'm also the Founder and CEO of
+              Umark Designs and Development.
             </p>
           </div>
 
@@ -146,15 +151,12 @@ export function Home() {
       <section>
         <div className="text-4xl text-white text-center font-semibold font-bricolage mt-3">
           <h1>Tech Stacks</h1>
-          <div className="grid grid-cols-2 px-4 py-6 mx-auto max-w-7xl mt-10">
+          <div className="grid lg:grid-cols-3 sm:grid-cols-1 px-4 py-6 mx-auto max-w-7xl mt-10">
             <div className="font-bold text-2xl text-center">
               <h1>Frontend</h1>
-              <div className="grid grid-cols-2 p-3 gap-3">
+              <div className="grid lg:grid-cols-3 sm:grid-cols-1 p-3 gap-3">
                 {frontendStacks.map((stack, index) => (
-                  <span
-                    key={stack.name}
-                    className="tech-stack-item"
-                  >
+                  <span key={stack.name} className="tech-stack-item">
                     <span
                       className="tech-icon-bubble"
                       aria-hidden="true"
@@ -174,12 +176,9 @@ export function Home() {
             </div>
             <div className="font-bold text-2xl text-center">
               <h1>Backend</h1>
-              <div className="grid grid-cols-2 p-3 gap-3">
+              <div className="grid lg:grid-cols-3 sm:grid-cols-1 p-3 gap-3">
                 {backendStacks.map((stack, index) => (
-                  <span
-                    key={stack.name}
-                    className="tech-stack-item"
-                  >
+                  <span key={stack.name} className="tech-stack-item">
                     <span
                       className="tech-icon-bubble"
                       aria-hidden="true"
@@ -198,12 +197,9 @@ export function Home() {
             </div>
             <div className="font-bold text-2xl text-center">
               <h1>Tools</h1>
-              <div className="grid grid-cols-2 p-3 gap-3">
+              <div className="grid lg:grid-cols-3 sm:grid-cols-1 p-3 gap-3">
                 {tools.map((tool, index) => (
-                  <span
-                    key={tool.name}
-                    className="tech-stack-item"
-                  >
+                  <span key={tool.name} className="tech-stack-item">
                     <span
                       className="tech-icon-bubble"
                       aria-hidden="true"
@@ -234,8 +230,8 @@ export function Home() {
               Let&apos;s build something meaningful.
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-slate-300">
-              Have an idea, a project, or an opportunity in mind? I&apos;d love to
-              hear from you and explore how we can work together.
+              Have an idea, a project, or an opportunity in mind? I&apos;d love
+              to hear from you and explore how we can work together.
             </p>
           </div>
 
@@ -278,6 +274,29 @@ export function Home() {
                   </span>
                 </a>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex flex-col items-center">
+        <div
+          className="text-4xl text-white text-center font-semibold font-bricolage mt-3"
+          id="OurWorks"
+        >
+          <h1>Our Works</h1>
+        </div>
+        <div className="lg:flex sm:flex-1/12 gap-50 mt-10 mx-auto max-w-7xl px-6 py-24 items-center">
+          <div className="font-bold text-2xl text-white flex flex-col items-center">
+            Graphic Design{" "}
+            <div>
+              <FolderCard />
+            </div>
+          </div>
+          <div className="font-bold text-2xl text-white flex flex-col items-center  ">
+            Web Apps / Websites{" "}
+            <div>
+              <Webapp/>
             </div>
           </div>
         </div>
